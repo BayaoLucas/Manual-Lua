@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manual didático de programação Lua. Aprenda do básico ao avançado.">
+    <title>LUA | Manual de Programação</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+
+    <div class="stars"></div>
+    <div class="nebula nebula-one"></div>
+    <div class="nebula nebula-two"></div>
+
+    <div class="reading-progress" id="readingProgress"></div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+        ☰
+    </button>
+
+    <aside class="sidebar" id="sidebar">
+        <div class="brand">
+            <div class="moon-logo">☾</div>
+            <div>
+                <h2>LUA<span>.</span></h2>
+                <small>MANUAL DE PROGRAMAÇÃO</small>
+            </div>
+        </div>
+
+        <div class="sidebar-label">NAVEGAÇÃO</div>
+
+        <nav>
+            <a href="#inicio" class="nav-link active">☾ <span>Início</span></a>
+            <a href="#introducao" class="nav-link">✦ <span>Introdução</span></a>
+            <a href="#porque-lua" class="nav-link">✨ <span>Por que usar Lua?</span> </a>
+            <a href="#instalacao" class="nav-link">⌘ <span>Instalação</span></a>
+            <a href="#sintaxe" class="nav-link">✧ <span>Sintaxe básica</span></a>
+            <a href="#variaveis" class="nav-link">◇ <span>Variáveis</span></a>
+            <a href="#dados" class="nav-link">✧ <span>Tipos de dados</span></a>
+            <a href="#operadores" class="nav-link">⊕ <span>Operadores</span></a>
+            <a href="#condicionais" class="nav-link">✦ <span>Condicionais</span></a>
+            <a href="#loops" class="nav-link">⟳ <span>Repetições</span></a>
+            <a href="#funcoes" class="nav-link">❋ <span>Funções</span></a>
+            <a href="#tabelas" class="nav-link">▦ <span>Tabelas</span></a>
+            <a href="#modulos" class="nav-link">✺ <span>Módulos</span></a>
+            <a href="#projeto" class="nav-link">🚀 <span>Projeto prático</span></a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <span>✦</span> Explore o universo Lua
+            <small>Uma jornada pela programação</small>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <!-- INÍCIO -->
+        <section id="inicio" class="hero">
+            <div class="hero-tag">✦ GUIA DE APRENDIZADO • 2026</div>
+
+            <div class="hero-moon">☾</div>
+
+            <h1>O UNIVERSO<br>DA <span>LUA</span></h1>
+
+            <p class="hero-description">
+                Explore uma linguagem de programação leve, poderosa
+                e versátil. Do primeiro comando até a criação de
+                programas completos, sua jornada começa aqui.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#introducao" class="btn-primary">Começar jornada ✦</a>
+                <a href="#sintaxe" class="btn-secondary">Explorar conteúdo</a>
+            </div>
+
+            <div class="hero-stats">
+                <div>
+                    <strong>01</strong>
+                    <span>LINGUAGEM</span>
+                </div>
+                <div>
+                    <strong>13</strong>
+                    <span>CAPÍTULOS</span>
+                </div>
+                <div>
+                    <strong>∞</strong>
+                    <span>POSSIBILIDADES</span>
+                </div>
+            </div>
+
+            <div class="hero-orbit orbit-one"></div>
+            <div class="hero-orbit orbit-two"></div>
+        </section>
+
+        <!-- INTRODUÇÃO -->
+        <section id="introducao" class="content-section">
+            <div class="section-heading">
+                <span class="chapter">CAPÍTULO 01</span>
+                <h2>O que é <span>Lua?</span></h2>
+                <p>Conhecendo a linguagem que combina simplicidade e eficiência.</p>
+            </div>
+
+            <div class="glass-card">
+                <h3>🌙 Conhecendo Lua</h3>
+                <p>
+                    Lua é uma linguagem de programação criada em 1993,
+                    na Pontifícia Universidade Católica do Rio de Janeiro (PUC-Rio),
+                    por Roberto Ierusalimschy, Luiz Henrique de Figueiredo
+                    e Waldemar Celes.
+                </p>
+                <p>
+                    Ela foi desenvolvida para ser leve, eficiente e fácil
+                    de incorporar em outros programas. Sua sintaxe simples
+                    permite que iniciantes aprendam programação sem lidar
+                    com uma estrutura excessivamente complicada.
+                </p>
+            </div>
+
+
+            <h3 class="subheading">Onde Lua é utilizada?</h3>
+
+            <article class="info-card">
+                <span class="card-icon">⚔️</span>
+                <h3>World of Warcraft</h3>
+                <p> O famoso MMORPG utiliza Lua para personalizar sua interface e desenvolver AddOns, que permitem
+                    adicionar funcionalidades, ferramentas e
+                    modificações à experiência dos jogadores.
+                </p>
+            </article>
+            <br>
+
+            <div class="card-grid">
+                <article class="info-card">
+                    <span class="card-icon">🎮</span>
+                    <h3>Jogos</h3>
+                    <p>Utilizada em jogos e motores de desenvolvimento para criar comportamentos e sistemas.</p>
+                </article>
+
+                <article class="info-card">
+                    <span class="card-icon">⚙️</span>
+                    <h3>Automação</h3>
+                    <p>Permite criar scripts que automatizam tarefas e processos.</p>
+                </article>
+
+                <article class="info-card">
+                    <span class="card-icon">💻</span>
+                    <h3>Aplicações</h3>
+                    <p>Pode ser incorporada em softwares desenvolvidos em outras linguagens.</p>
+                </article>
+
+                <article class="info-card">
+                    <span class="card-icon">🌐</span>
+                    <h3>Sistemas</h3>
+                    <p>É utilizada em sistemas embarcados e diferentes ferramentas tecnológicas.</p>
+                </article>
+
+            </div>
+
+            <div class="tip-box">
+                <span>✦</span>
+                <p><strong>Curiosidade:</strong> Lua significa "lua" em português. Seu nome foi escolhido em referência
+                    ao projeto SOL, que a precedeu.</p>
+            </div>
+        </section>
+
+        <!-- POR QUE USAR LUA -->
+        <section id="porque-lua" class="content-section">
+
+            <div class="section-heading">
+                <span class="chapter">CAPÍTULO 02</span>
+                <h2>Por que escolher <span>Lua?</span></h2>
+                <p>
+                    Mais do que uma linguagem simples, Lua é uma
+                    ferramenta poderosa para transformar ideias em realidade.
+                </p>
+            </div>
+
+            <div class="glass-card">
+                <h3>🌌 Uma linguagem cheia de possibilidades</h3>
+
+                <p>
+                    Aprender uma linguagem de programação é abrir
+                    as portas para um universo de possibilidades.
+                    Lua se destaca por sua simplicidade, velocidade
+                    e versatilidade, sendo uma excelente escolha
+                    tanto para iniciantes quanto para desenvolvedores
+                    experientes.
+                </p>
+
+                <p>
+                    Sua estrutura leve permite que seja utilizada
+                    em jogos, aplicações, sistemas embarcados e
+                    diversos outros projetos tecnológicos.
+                </p>
+
+                <p>
+                    Com Lua, você pode começar com pequenos scripts
+                    e evoluir até desenvolver funcionalidades
+                    complexas para diferentes aplicações.
+                </p>
+            </div>
+
+            <h3 class="subheading">⭐ Por que aprender Lua?</h3>
+
+            <div class="card-grid">
+
+                <article class="info-card">
+                    <span class="card-icon">🌱</span>
+                    <h3>Fácil de aprender</h3>
+                    <p>
+                        Lua possui uma sintaxe simples e organizada,
+                        facilitando o aprendizado dos primeiros
+                        conceitos de programação.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="card-icon">⚡</span>
+                    <h3>Leve e eficiente</h3>
+                    <p>
+                        Seu interpretador possui tamanho reduzido
+                        e foi projetado para funcionar com baixo
+                        consumo de recursos.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="card-icon">🎮</span>
+                    <h3>Presente nos jogos</h3>
+                    <p>
+                        Lua é utilizada em jogos para desenvolver
+                        sistemas, comportamentos, interfaces e
+                        funcionalidades personalizadas.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="card-icon">🔧</span>
+                    <h3>Fácil integração</h3>
+                    <p>
+                        Pode ser incorporada a programas escritos
+                        em outras linguagens, especialmente C e C++.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="card-icon">🌍</span>
+                    <h3>Versatilidade</h3>
+                    <p>
+                        Pode ser utilizada em diferentes áreas,
+                        desde automações até sistemas embarcados
+                        e desenvolvimento de jogos.
+                    </p>
+                </article>
+
+                <article class="info-card">
+                    <span class="card-icon">🚀</span>
+                    <h3>Liberdade para criar</h3>
+                    <p>
+                        Permite desenvolver projetos próprios,
+                        experimentar ideias e transformar
+                        conhecimentos em soluções reais.
+                    </p>
+                </article>
+
+            </div>
+
+            <h3 class="subheading">🪐 Onde Lua pode levar você?</h3>
+
+            <div class="glass-card">
+                <h3>Um mundo de oportunidades</h3>
+
+                <p>
+                    Ao aprender Lua, você desenvolve habilidades
+                    que podem ser aplicadas em diferentes projetos.
+                    Veja algumas possibilidades:
+                </p>
+
+                <ul class="opportunity-list">
+                    <li>🎮 Criar mecânicas e funcionalidades para jogos.</li>
+                    <li>🤖 Automatizar tarefas utilizando scripts.</li>
+                    <li>💻 Integrar funcionalidades em aplicações.</li>
+                    <li>🧠 Desenvolver raciocínio lógico e pensamento computacional.</li>
+                    <li>🛠️ Criar ferramentas e projetos independentes.</li>
+                </ul>
+            </div>
+
+            <div class="highlight-card">
+                <div class="highlight-moon">☾</div>
+
+                <span class="chapter">UMA MENSAGEM PARA VOCÊ</span>
+
+                <h2>Todo grande projeto<br>começa com uma linha.</h2>
+
+                <p>
+                    Você não precisa saber tudo para começar.
+                    Precisa apenas ter curiosidade, disposição
+                    para aprender e vontade de experimentar.
+
+                    Lua pode ser o primeiro passo para transformar
+                    suas ideias em algo real.
+                </p>
+
+                <a href="#instalacao" class="btn-primary">
+                    Quero começar a aprender ✦
+                </a>
+            </div>
+
+        </section>
+
+        <!-- INSTALAÇÃO -->
+        <section id="instalacao" class="content-section">
+            <div class="section-heading">
+                <span class="chapter">CAPÍTULO 02</span>
+                <h2>Instalando <span>Lua</span></h2>
+                <p>Prepare seu ambiente para começar a programar.</p>
+            </div>
+
+            <div class="glass-card">
+                <h3>Como instalar?</h3>
+                <p>
+                    Para executar programas em Lua, você precisa instalar
+                    o interpretador da linguagem no seu computador.
+                </p>
+
+                <ol class="steps">
+                    <li>Entre no site oficial da linguagem Lua.</li>
+                    <li>Acesse a seção de downloads.</li>
+                    <li>Baixe a versão compatível com seu sistema operacional.</li>
+                    <li>Instale e configure o interpretador.</li>
+                    <li>Abra o terminal e digite <code>lua -v</code> para verificar a instalação.</li>
+                </ol>
+
+                <a href="https://www.lua.org/download.html" target="_blank" rel="noopener" class="external-link">
+                    Acessar site oficial da Lua ↗
+                </a>
+            </div>
+
+            <div class="glass-card">
+                <h3>Seu primeiro arquivo</h3>
+                <p>Crie um arquivo com o nome <code>primeiro.lua</code> e escreva:</p>
+
+                <pre><code>print("Olá, universo!")
+
+print("Estou aprendendo Lua!")</code></pre>
+
+                <p>Depois, execute o arquivo pelo terminal:</p>
+                <pre><code>lua primeiro.lua</code></pre>
+
+                <div class="result-box">
+                    <span>SAÍDA DO PROGRAMA</span>
+                    <code>Olá, universo!<br>Estou aprendendo Lua!</code>
+                </div>
+            </div>
+        </section>
+
+        <!-- SINTAXE -->
+        <section id="sintaxe" class="content-section">
+            <div class="section-heading">
+                <span class="chapter">CAPÍTULO 03</span>
+                <h2>Sintaxe <span>básica</span></h2>
+                <p>Entenda como escrever instruções em Lua.</p>
+            </div>
+
+            <div class="glass-card">
+                <h3>O comando print()</h3>
+                <p>
+                    O comando <code>print()</code> é utilizado para exibir
+                    informações na tela. Ele é muito útil para testar
+                    programas e visualizar resultados.
+                </p>
+
+                <pre><code>print("Olá, mundo!")
+print(100)
+print(10 + 5)</code></pre>
+
+                <div class="result-box">
+                    <span>RESULTADO</span>
+                    <code>Olá, mundo!<br>100<br>15</code>
+                </div>
+            </div>
+
+            <div class="glass-card">
+                <h3>Comentários</h3>
+                <p>
+                    Comentários são textos que o interpretador ignora.
+                    Eles servem para explicar o funcionamento do código.
+                </p>
+
+                <pre><code>-- Este é um comentário de uma linha
+
+--[[
+    Este é um comentário
+    de várias linhas
+]]</code></pre>
+            </div>
+
+            <div class="tip-box">
+                <span>⭐</span>
+                <p>Lua diferencia letras maiúsculas de minúsculas. Por exemplo, <code>print</code> e <code>Print</code>
+                    não são o mesmo comando.</p>
+            </div>
+        </section>
+
+        <!-- VARIÁVEIS -->
+        <section id="variaveis" class="content-section">
+            <div class="section-heading">
+                <span class="chapter">CAPÍTULO 04</span>
+                <h2>Variáveis <span>em Lua</span></h2>
+                <p>Armazenando informações durante a execução.</p>
+            </div>
+
+            <div class="glass-card">
+                <h3>O que são variáveis?</h3>
+                <p>
+                    Variáveis são espaços utilizados para armazenar
+                    informações que podem ser acessadas e modificadas
+                    durante a execução de um programa.
+                </p>
+
+                <pre><code>local nome = "Marina"
+local idade = 20
+local altura = 1.65
+
+print(nome)
+print(idade)
+print(altura)</code></pre>
+            </div>
+
+            <div class="glass-card">
+                <h3>Variáveis locais e globais</h3>
+                <p>
+                    A palavra-chave <code>local</code> cria uma variável
+                    local, limitada ao seu escopo. Já uma atribuição sem
+                    <code>local</code> pode criar ou modificar uma variável
+                    global, caso não exista uma variável local com aquele nome.
+                </p>
+
+                <pre><code>local pontuacao = 100
+
+mensagem = "Olá!"
+
+print(pontuacao)
+print(mensagem)</code></pre>
+            </div>
+        </section>
+
+        <!-- TIPOS DE DADOS -->
+        <section id="dados" class="content-section">
+            <div class="section-heading">
+                <span class="chapter">CAPÍTULO 05</span>
+                <h2>Tipos de <span>dados</span></h2>
+                <p>Conheça os principais tipos de informação.</p>
+            </div>
+
+            <div class="card-grid">
+                <article class="info-card">
+                    <span class="card-icon">🔤</span>
+                    <h3>String</h3>
+                    <p>Representa textos e sequências de caracteres.</p>
+                    <pre><code>local nome = "Lua"</code></pre>
+                </article>
+
+                <article class="info-card">
+                    <span class="card-icon">🔢</span>
+                    <h3>Number</h3>
+                    <p>Representa números inteiros e decimais.</p>
+                    <pre><code>local numero = 42</code></pre>
+                </article>
+
+                <article class="info-card">
+                    <span class="card-icon">⚖️</span>
+                    <h3>Boolean</h3>
+                    <p>Representa verdadeiro ou falso.</p>
+                    <pre><code>local ativo = true</code></pre>
+                </article>
+
+                <article class="info-card">
+                    <span class="card-icon">🌑</span>
+                    <h3>Nil</h3>
+                    <p>Representa a ausência de um valor.</p>
+                    <pre><code>local dado = nil</code></pre>
+                </article>
+
+                <article class="info-card">
+                    <span class="card-icon">📦</span>
+                    <h3>Table</h3>
+                    <p>Armazena coleções de valores e estruturas de dados.</p>
+                    <pre><code>local lista = {1, 2, 3}</code></pre>
+                </article>
+
+                <article class="info-card">
+                    <span class="card-icon">🧩</span>
+                    <h3>Function</h3>
+                    <p>Representa funções, blocos reutilizáveis de código.</p>
+                    <pre><code>local f = function() end</code></pre>
+                </article>
+            </div>
+
+            <div class="tip-box">
+                <span>✦</span>
+                <p>Lua também possui outros tipos internos, como <code>userdata</code> e <code>thread</code>. A função
+                    <code>type()</code> permite identificar o tipo de um valor.
+                </p>
+            </div>
+        </section>
+
+        <!-- OPERADORES -->
+        <section id="operadores" class="content-section">
+            <div class="section-heading">
+                <span class="chapter">CAPÍTULO 06</span>
+                <h2><span>Operadores</span></h2>
+                <p>Realizando operações e comparações.</p>
+            </div>
+
+            <div class="glass-card">
+                <h3>Operadores matemáticos</h3>
+                <table>
+                    <tr>
+                        <th>Operador</th>
+                        <th>Função</th>
+                        <th>Exemplo</th>
+                    </tr>
+                    <tr>
+                        <td>+</td>
+                        <td>Adição</td>
+                        <td>10 + 5</td>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>Subtração</td>
+                        <td>10 - 5</td>
+                    </tr>
+                    <tr>
+                        <td>*</td>
+                        <td>Multiplicação</td>
+                        <td>10 * 5</td>
+                    </tr>
+                    <tr>
+                        <td>/</td>
+                        <td>Divisão</td>
+                        <td>10 / 5</td>
+                    </tr>
+                    <tr>
+                        <td>//</td>
+                        <td>Divisão inteira</td>
+                        <td>10 // 3</td>
+                    </tr>
+                    <tr>
+                        <td>%</td>
+                        <td>Resto da divisão</td>
+                        <td>10 % 3</td>
+                    </tr>
+                    <tr>
+                        <td>^</td>
+                        <td>Potenciação</td>
+                        <td>2 ^ 3</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="glass-card">
+                <h3>Operadores relacionais</h3>
+                <table>
+                    <tr>
+                        <th>Operador</th>
+                        <th>Significado</th>
+                    </tr>
+                    <tr>
+                        <td>==</td>
+                        <td>Igual a</td>
+                    </tr>
+                    <tr>
+                        <td>~=</td>
+                        <td>Diferente de</td>
+                    </tr>
+                    <tr>
+                        <td>&gt;</td>
+                        <td>Maior que</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;</td>
+                        <td>Menor que</td>
+                    </tr>
+                    <tr>
+                        <td>&gt;=</td>
+                        <td>Maior ou igual</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;=</td>
+                        <td>Menor ou igual</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="glass-card">
+                <h3>Operadores lógicos</h3>
+                <pre><code>local a = true
+local b = false
+
+print(a and b) -- false
+print(a or b)  -- true
+print(not a)   -- false</code></pre>
+                <p><code>and</code> representa E, <code>or</code> representa OU e <code>not</code> inverte o valor
+                    lógico.</p>
+            </div>
+        </section>
+
+        <!-- CONDICIONAIS -->
+        <section id="condicionais" class="content-section">
+            <div class="section-heading">
+                <span class="chapter">CAPÍTULO 07</span>
+                <h2>Estruturas <span>condicionais</span></h2>
+                <p>Ensinando o programa a tomar decisões.</p>
+            </div>
+
+            <div class="glass-card">
+                <h3>If, elseif e else</h3>
+                <p>
+                    As estruturas condicionais permitem executar diferentes
+                    comandos dependendo de uma condição.
+                </p>
+
+                <pre><code>local idade = 18
+
+if idade >= 18 then
+    print("Maior de idade")
+elseif idade >= 16 then
+    print("Pode votar no Brasil")
+else
+    print("Menor de idade")
+end</code></pre>
+
+                <p>
+                    A palavra <code>if</code> inicia a condição,
+                    <code>elseif</code> adiciona outra possibilidade,
+                    <code>else</code> define uma alternativa e
+                    <code>end</code> encerra a estrutura.
+                </p>
+            </div>
+        </section>
+
+        <!-- REPETIÇÕES -->
+        <section id="loops" class="content-section">
+            <div class="section-heading">
+                <span class="chapter">CAPÍTULO 08</span>
+                <h2>Laços de <span>repetição</span></h2>
+                <p>Execute instruções várias vezes automaticamente.</p>
+            </div>
+
+            <div class="glass-card">
+                <h3>While</h3>
+                <p>Repete os comandos enquanto a condição for verdadeira.</p>
+                <pre><code>local numero = 1
+
+while numero <= 5 do
+    print(numero)
+    numero = numero + 1
+end</code></pre>
+            </div>
+
+            <div class="glass-card">
+                <h3>Repeat Until</h3>
+                <p>Executa os comandos pelo menos uma vez e repete até que a condição seja verdadeira.</p>
+                <pre><code>local numero = 1
+
+repeat
+    print(numero)
+    numero = numero + 1
+until numero > 5</code></pre>
+            </div>
+
+            <div class="glass-card">
+                <h3>For numérico</h3>
+                <p>Utilizado quando sabemos quantas vezes queremos repetir uma ação.</p>
+                <pre><code>for i = 1, 5 do
+    print("Estrela número " .. i)
+end</code></pre>
+            </div>
+
+            <div class="glass-card">
+                <h3>For genérico</h3>
+                <p>Percorre os elementos de uma tabela usando iteradores.</p>
+                <pre><code>local planetas = {
+    "Terra",
+    "Marte",
+    "Júpiter"
+}
+
+for indice, planeta in ipairs(planetas) do
+    print(indice, planeta)
+end</code></pre>
+            </div>
+        </section>
+
+        <!-- FUNÇÕES -->
+        <section id="funcoes" class="content-section">
+            <div class="section-heading">
+                <span class="chapter">CAPÍTULO 09</span>
+                <h2><span>Funções</span></h2>
+                <p>Organizando e reutilizando blocos de código.</p>
+            </div>
+
+            <div class="glass-card">
+                <h3>Criando uma função</h3>
+                <p>
+                    Uma função é um conjunto de instruções que pode ser
+                    executado sempre que for chamado.
+                </p>
+
+                <pre><code>local function saudacao()
+    print("Bem-vindo ao universo Lua!")
+end
+
+saudacao()</code></pre>
+            </div>
+
+            <div class="glass-card">
+                <h3>Parâmetros e retorno</h3>
+                <p>As funções podem receber informações e devolver resultados.</p>
+
+                <pre><code>local function somar(a, b)
+    return a + b
+end
+
+local resultado = somar(10, 20)
+
+print(resultado)</code></pre>
+            </div>
+        </section>
+
+        <!-- TABELAS -->
+        <section id="tabelas" class="content-section">
+            <div class="section-heading">
+                <span class="chapter">CAPÍTULO 10</span>
+                <h2>As <span>tabelas</span></h2>
+                <p>Uma das estruturas mais importantes de Lua.</p>
+            </div>
+
+            <div class="glass-card">
+                <h3>O que são tabelas?</h3>
+                <p>
+                    Tabelas são estruturas capazes de armazenar diversos
+                    valores. Elas podem funcionar como listas, dicionários
+                    e estruturas de objetos.
+                </p>
+
+                <pre><code>local frutas = {
+    "Maçã",
+    "Banana",
+    "Uva"
+}
+
+print(frutas[1]) -- Maçã
+print(frutas[2]) -- Banana</code></pre>
+
+                <p>Em Lua, os índices de uma lista normalmente começam em 1.</p>
+            </div>
+
+            <div class="glass-card">
+                <h3>Tabelas com chaves</h3>
+                <pre><code>local pessoa = {
+    nome = "Ana",
+    idade = 25,
+    cidade = "Rio de Janeiro"
+}
+
+print(pessoa.nome)
+print(pessoa.idade)</code></pre>
+            </div>
+
+            <div class="glass-card">
+                <h3>Adicionando informações</h3>
+                <pre><code>local planetas = {"Terra", "Marte"}
+
+table.insert(planetas, "Júpiter")
+
+print(planetas[3])</code></pre>
+            </div>
+        </section>
+
+        <!-- MÓDULOS -->
+        <section id="modulos" class="content-section">
+            <div class="section-heading">
+                <span class="chapter">CAPÍTULO 11</span>
+                <h2><span>Módulos</span> e bibliotecas</h2>
+                <p>Organizando códigos em diferentes arquivos.</p>
+            </div>
+
+            <div class="glass-card">
+                <h3>O que são módulos?</h3>
+                <p>
+                    Módulos permitem separar funcionalidades em arquivos
+                    diferentes, facilitando a organização e reutilização
+                    de código.
+                </p>
+
+                <p>Exemplo: crie um arquivo chamado <code>matematica.lua</code>.</p>
+
+                <pre><code>local M = {}
+
+function M.dobro(numero)
+    return numero * 2
+end
+
+return M</code></pre>
+
+                <p>Agora crie outro arquivo chamado <code>main.lua</code>.</p>
+
+                <pre><code>local matematica = require("matematica")
+
+print(matematica.dobro(5))</code></pre>
+
+                <div class="result-box">
+                    <span>RESULTADO</span>
+                    <code>10</code>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJETO -->
+        <section id="projeto" class="content-section">
+            <div class="section-heading">
+                <span class="chapter">CAPÍTULO 12</span>
+                <h2>Seu primeiro <span>projeto</span></h2>
+                <p>Juntando os conhecimentos em um programa simples.</p>
+            </div>
+
+            <div class="glass-card">
+                <h3>🌟 Desafio: Calculadora cósmica</h3>
+                <p>
+                    Vamos criar uma calculadora que recebe dois números
+                    e realiza uma operação matemática.
+                </p>
+
+                <pre><code>print("=== CALCULADORA LUA ===")
+
+print("Digite o primeiro número:")
+local numero1 = tonumber(io.read())
+
+print("Digite o segundo número:")
+local numero2 = tonumber(io.read())
+
+print("Escolha a operação: +, -, * ou /")
+local operacao = io.read()
+
+if operacao == "+" then
+    print("Resultado:", numero1 + numero2)
+
+elseif operacao == "-" then
+    print("Resultado:", numero1 - numero2)
+
+elseif operacao == "*" then
+    print("Resultado:", numero1 * numero2)
+
+elseif operacao == "/" then
+    if numero2 ~= 0 then
+        print("Resultado:", numero1 / numero2)
+    else
+        print("Erro: divisão por zero!")
+    end
+
+else
+    print("Operação inválida!")
+end</code></pre>
+
+                <div class="tip-box">
+                    <span>🚀</span>
+                    <p>Esse projeto utiliza variáveis, entrada de dados, conversão de tipos, operadores e estruturas
+                        condicionais.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL -->
+        <section class="final-section">
+            <div class="final-moon">☾</div>
+            <span class="chapter">FIM DA JORNADA</span>
+            <h2>O UNIVERSO É O<br>SEU LIMITE.</h2>
+            <p>
+                Você chegou ao final deste manual, mas sua jornada
+                pela programação está apenas começando.
+                Continue explorando, experimentando e criando.
+            </p>
+            <a href="#inicio" class="btn-primary">Voltar ao início ↑</a>
+        </section>
+
+        <footer>
+            <div class="footer-line"></div>
+            <p>☾ LUA — MANUAL DE PROGRAMAÇÃO</p>
+            <small>Desenvolvido para explorar o universo da programação.</small>
+            <small>Conteúdo introdutório baseado em Lua 5.4.</small>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
